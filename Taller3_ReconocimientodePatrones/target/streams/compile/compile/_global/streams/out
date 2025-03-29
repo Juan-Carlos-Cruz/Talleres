@@ -1,0 +1,13 @@
+[0m[[0m[31merror[0m] [0m[0mC:\Users\Usuario\OneDrive\Escritorio\Universidad\4 Semestre\FDP funcional y concurrente\Taller3\Taller3_ReconocimientodePatrones\src\main\scala\ManiobrasTrenes\package.scala:22:69: type mismatch;[0m
+[0m[[0m[31merror[0m] [0m[0m found   : Unit[0m
+[0m[[0m[31merror[0m] [0m[0m required: List[ManiobraTrenes.package.Estado][0m
+[0m[[0m[31merror[0m] [0m[0m    (which expands to)  List[(List[Any], List[Any], List[Any])][0m
+[0m[[0m[31merror[0m] [0m[0m  def aplicarMovimientos(e: Estado, movs: Maniobra): List[Estado] = {[0m
+[0m[[0m[31merror[0m] [0m[0m                                                                    ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\Usuario\OneDrive\Escritorio\Universidad\4 Semestre\FDP funcional y concurrente\Taller3\Taller3_ReconocimientodePatrones\src\main\scala\ManiobrasTrenes\package.scala:26:55: type mismatch;[0m
+[0m[[0m[31merror[0m] [0m[0m found   : Unit[0m
+[0m[[0m[31merror[0m] [0m[0m required: ManiobraTrenes.package.Maniobra[0m
+[0m[[0m[31merror[0m] [0m[0m    (which expands to)  List[ManiobraTrenes.package.Movimiento][0m
+[0m[[0m[31merror[0m] [0m[0m  def definirManiobra(t1: Tren, t2: Tren): Maniobra = {[0m
+[0m[[0m[31merror[0m] [0m[0m                                                      ^[0m
+[0m[[0m[31merror[0m] [0m[0mtwo errors found[0m
