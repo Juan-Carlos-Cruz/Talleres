@@ -63,7 +63,7 @@
     estadosInversos.reverse
   }
 
-      // BFS funcional que no usa 'while' ni 'for':
+      
  def definirManiobra(t1: Tren, t2: Tren): Maniobra = {
   val inicio: Estado = (t1, Nil, Nil)
   val fin: Estado = (t2, Nil, Nil)
