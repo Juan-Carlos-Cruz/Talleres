@@ -63,46 +63,37 @@
     estadosInversos.reverse
   }
 
-    // BFS funcional que no usa 'while' ni 'for':
-  def definirManiobra(t1: Tren, t2: Tren): Maniobra = {
-    val inicio: Estado = (t1, Nil, Nil)
-    val fin:    Estado = (t2, Nil, Nil)
+      // BFS funcional que no usa 'while' ni 'for':
+ def definirManiobra(t1: Tren, t2: Tren): Maniobra = {
+  val inicio: Estado = (t1, Nil, Nil)
+  val fin: Estado = (t2, Nil, Nil)
 
-    // Genera todos los (estadoSiguiente, movimiento) vecinos de un estado
-    def vecinos(e: Estado): List[(Estado, Movimiento)] = {
-      val (p, u, d) = e
-      val maxN = math.max(p.length, math.max(u.length, d.length))
-      // Sin 'for': utilizamos range y flatMap:
-      val movs = (1 to maxN).toList.flatMap(n => List(Uno(n), Uno(-n), Dos(n), Dos(-n)))
-      // Para cada movimiento, devolvemos (nuevoEstado, mov)
-      movs.map(m => (aplicarMovimiento(e, m), m))
-    }
-
-    // BFS recursivo: 'queue' es la cola en forma de lista,
-    // cada elemento es (estado, maniobraParaLlegar).
-    // 'visitados' guarda los estados ya explorados.
-    def bfs(queue: List[(Estado, Maniobra)], visitados: Set[Estado]): Option[Maniobra] = {
-      queue match {
-        case Nil => None
-        case (estActual, path) :: resto =>
-          if (estActual == fin) Some(path)
-          else {
-            // Obtenemos los vecinos y actualizamos la cola y visitados SIN for:
-            val (restoActualizado, nuevosVisitados) =
-              vecinos(estActual).foldLeft((resto, visitados)) {
-                case ((q, v), (estSig, mov)) =>
-                  if (!v.contains(estSig)) ((q :+ (estSig, path :+ mov)), v + estSig)
-                  else (q, v)
-              }
-            bfs(restoActualizado, nuevosVisitados)
-          }
-      }
-    }
-
-    // Iniciamos con la cola conteniendo solamente el estado inicial, y sin movimientos.
-    // Si no hay solución, devolvemos Nil.
-    bfs(List((inicio, Nil)), Set(inicio)).getOrElse(Nil)
+  def vecinos(e: Estado): List[(Estado, Movimiento)] = {
+    val (p, u, d) = e
+    val maxN = math.max(p.length, math.max(u.length, d.length))
+    val movs = (1 to maxN).toList.flatMap(n => List(Uno(n), Uno(-n), Dos(n), Dos(-n)))
+    movs.map(m => (aplicarMovimiento(e, m), m))
   }
+
+  def bfs(queue: List[(Estado, Maniobra)], visitados: Set[Estado]): List[Movimiento] = {
+    queue match {
+      case Nil => Nil // sin solución
+      case (estActual, path) :: resto =>
+        if (estActual == fin) path
+        else {
+          val (restoActualizado, nuevosVisitados) =
+            vecinos(estActual).foldLeft((resto, visitados)) {
+              case ((q, v), (estSig, mov)) =>
+                if (!v.contains(estSig)) ((q :+ (estSig, path :+ mov)), v + estSig)
+                else (q, v)
+            }
+          bfs(restoActualizado, nuevosVisitados)
+        }
+    }
+  }
+
+  bfs(List((inicio, Nil)), Set(inicio))
+}
 
   }
 
