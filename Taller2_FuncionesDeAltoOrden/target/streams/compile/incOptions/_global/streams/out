@@ -1,0 +1,17 @@
+[0m[[0m[0mdebug[0m] [0m[0mCreated transactional ClassFileManager with tempDir = C:\Users\Usuario\OneDrive\Escritorio\Universidad\4 Semestre\FDP funcional y concurrente\Taller2\carpeta\Taller2_FuncionesdeAltoOrden\target\scala-3.3.5\classes.bak[0m
+[0m[[0m[0mdebug[0m] [0m[0mAbout to delete class files:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	package.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	package$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	package.tasty[0m
+[0m[[0m[0mdebug[0m] [0m[0m	package$.tasty[0m
+[0m[[0m[0mdebug[0m] [0m[0mWe backup class files:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	package.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	package$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	package.tasty[0m
+[0m[[0m[0mdebug[0m] [0m[0m	package$.tasty[0m
+[0m[[0m[0mdebug[0m] [0m[0mRegistering generated classes:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	package$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	package.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	package$.tasty[0m
+[0m[[0m[0mdebug[0m] [0m[0m	package.tasty[0m
+[0m[[0m[0mdebug[0m] [0m[0mRemoving the temporary directory used for backing up class files: C:\Users\Usuario\OneDrive\Escritorio\Universidad\4 Semestre\FDP funcional y concurrente\Taller2\carpeta\Taller2_FuncionesdeAltoOrden\target\scala-3.3.5\classes.bak[0m

@@ -1,0 +1,20 @@
+{
+  "name": "scala-cli",
+  "argv": [
+    "C:\\Users\\Usuario\\AppData\\Local\\Coursier\\data\\bin\\.scala-cli.aux.exe",
+    "bsp",
+    "--json-options",
+    "C:\\Users\\Usuario\\OneDrive\\Escritorio\\Universidad\\4 Semestre\\FDP funcional y concurrente\\Taller-2\\.scala-build\\ide-options-v2.json",
+    "--json-launcher-options",
+    "C:\\Users\\Usuario\\OneDrive\\Escritorio\\Universidad\\4 Semestre\\FDP funcional y concurrente\\Taller-2\\.scala-build\\ide-launcher-options.json",
+    "--envs-file",
+    "C:\\Users\\Usuario\\OneDrive\\Escritorio\\Universidad\\4 Semestre\\FDP funcional y concurrente\\Taller-2\\.scala-build\\ide-envs.json",
+    "C:\\Users\\Usuario\\OneDrive\\Escritorio\\Universidad\\4 Semestre\\FDP funcional y concurrente\\Taller-2"
+  ],
+  "version": "1.6.2",
+  "bspVersion": "2.1.1",
+  "languages": [
+    "scala",
+    "java"
+  ]
+}

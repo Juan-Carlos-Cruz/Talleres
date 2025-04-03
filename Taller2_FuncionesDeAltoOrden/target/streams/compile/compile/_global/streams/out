@@ -1,0 +1,7 @@
+[0m[[0m[31merror[0m] [0m[0m[31m[31m-- [E039] Reference Error: C:\Users\Usuario\OneDrive\Escritorio\Universidad\4 Semestre\FDP funcional y concurrente\Taller2\derivacion\src\main\scala\Derivacion\package.scala:14:25 [0m[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m14 |[0m      [33mval[0m [36mdiferenciable[0m= abs(derivadaIzquierda - derivadaDerecha) < [31m1e-3[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m[31m   |[0m                         ^^^[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0mabs is a forward reference extending over the definition of diferenciable[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0m longer explanation available when compiling with `-explain`[0m
+[0m[[0m[31merror[0m] [0m[0mone error found[0m
