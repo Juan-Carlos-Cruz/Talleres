@@ -1,0 +1,10 @@
+[0m[[0m[31merror[0m] [0m[0mC:\Users\Usuario\OneDrive\Escritorio\Universidad\4 Semestre\FDP funcional y concurrente\Taller6\src\main\scala\Benchmark\package.scala:31:17: not found: value transformToParD[0m
+[0m[[0m[31merror[0m] [0m[0m    val m1parD= transformToParD(m1)[0m
+[0m[[0m[31merror[0m] [0m[0m                ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\Usuario\OneDrive\Escritorio\Universidad\4 Semestre\FDP funcional y concurrente\Taller6\src\main\scala\Benchmark\package.scala:32:17: not found: value transformToParD[0m
+[0m[[0m[31merror[0m] [0m[0m    val m2parD= transformToParD(m2)[0m
+[0m[[0m[31merror[0m] [0m[0m                ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\Usuario\OneDrive\Escritorio\Universidad\4 Semestre\FDP funcional y concurrente\Taller6\src\main\scala\Matrices\package.scala:40:18: No implicit view available from scala.collection.parallel.immutable.ParVector[Int] => Iterable[B].[0m
+[0m[[0m[31merror[0m] [0m[0m    val m2T = m2.transpose[0m
+[0m[[0m[31merror[0m] [0m[0m                 ^[0m
+[0m[[0m[31merror[0m] [0m[0mthree errors found[0m
