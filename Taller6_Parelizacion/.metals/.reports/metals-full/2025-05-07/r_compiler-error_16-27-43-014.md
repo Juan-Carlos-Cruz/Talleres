@@ -1,3 +1,16 @@
+file:///C:/Users/Usuario/OneDrive/Escritorio/Universidad/4%20Semestre/FDP%20funcional%20y%20concurrente/Taller6/src/main/scala/Matrices/package.scala
+### scala.MatchError: TypeDef(Matriz,AppliedTypeTree(Ident(Vector),List(AppliedTypeTree(Ident(Vector),List(Ident(Int)))))) (of class dotty.tools.dotc.ast.Trees$TypeDef)
+
+occurred in the presentation compiler.
+
+presentation compiler configuration:
+
+
+action parameters:
+offset: 3825
+uri: file:///C:/Users/Usuario/OneDrive/Escritorio/Universidad/4%20Semestre/FDP%20funcional%20y%20concurrente/Taller6/src/main/scala/Matrices/package.scala
+text:
+```scala
 import common._
 import Benchmark._
 import scala.util.Random
@@ -34,13 +47,13 @@ package object Matrices {
     val m2T = transpuesta(m2)
     Vector.tabulate(m1.length, m2T.length)((i, j) => prodPunto(m1(i), m2T(j)))
   }
-//  Ejercicio 1.1.1
+// Ejercicio 1.1.1
 
   def multMatrizPar(m1: Matriz, m2: Matriz): Matriz = {
     val m2T = transpuesta(m2)
     Vector.tabulate(m1.length, m2T.length)((i, j) => task { prodPunto(m1(i), m2T(j)) }.join())
   }
-//  Ejercicio 1.1.2
+// Ejercicio 1.1.2
 
   def multMatrizParD(m1: Vector[ParVector[Int]], m2: Vector[ParVector[Int]]): Matriz = {
     val m2T = m2.map(_.seq).transpose.map(_.toVector.par)
@@ -49,17 +62,19 @@ package object Matrices {
     )
   }
 
-  //  Ejercicio 1.2.1
+  // Ejercicio 1.2.1
 
   def subMatriz(m: Matriz, i: Int, j: Int, l: Int): Matriz =
     Vector.tabulate(l, l)((x, y) => m(i + x)(j + y))
 
-  //  Ejercicio 1.2.2
+  // Ejercicio 1.2.2
 
   def sumMatriz(m1: Matriz, m2: Matriz): Matriz =
     Vector.tabulate(m1.length, m1.length)((i, j) => m1(i)(j) + m2(i)(j))
 
-  //  Ejercicio 1.2.3
+  // Ejercicio 1.2.3
+
+
 
   def multMatrizRec(m1: Matriz, m2: Matriz): Matriz = {
     val n = m1.length
@@ -83,7 +98,6 @@ package object Matrices {
       C11.zip(C12).map { case (r1, r2) => r1 ++ r2 } ++ C21.zip(C22).map { case (r1, r2) => r1 ++ r2 }
     }
   }
-  //  Ejercicio 1.2.4
 
   def multMatrizRecPar(m1: Matriz, m2: Matriz): Matriz = {
     val n = m1.length
@@ -110,12 +124,9 @@ package object Matrices {
     }
   }
 
-  //  Ejercicio 1.3.1
-
+  //Ejercicio 1.@@
     def restaMatriz(m1: Matriz, m2: Matriz): Matriz =
     Vector.tabulate(m1.length, m1.length)((i, j) => m1(i)(j) - m2(i)(j))
-
-  //  Ejercicio 1.32
 
   def multStrassen(m1: Matriz, m2: Matriz): Matriz = {
     val n = m1.length
@@ -147,7 +158,7 @@ package object Matrices {
       C11.zip(C12).map { case (r1, r2) => r1 ++ r2 } ++ C21.zip(C22).map { case (r1, r2) => r1 ++ r2 }
     }
   }
-  //  Ejercicio 1.3.3
+
   def multStrassenPar(m1: Matriz, m2: Matriz): Matriz = {
     val n = m1.length
     if (n <= 64) multStrassen(m1, m2)
@@ -186,3 +197,22 @@ package object Matrices {
     }
   }
 }
+
+```
+
+
+
+#### Error stacktrace:
+
+```
+dotty.tools.pc.completions.KeywordsCompletions$.checkTemplateForNewParents$$anonfun$2(KeywordsCompletions.scala:218)
+	scala.Option.map(Option.scala:242)
+	dotty.tools.pc.completions.KeywordsCompletions$.checkTemplateForNewParents(KeywordsCompletions.scala:215)
+	dotty.tools.pc.completions.KeywordsCompletions$.contribute(KeywordsCompletions.scala:44)
+	dotty.tools.pc.completions.Completions.completions(Completions.scala:126)
+	dotty.tools.pc.completions.CompletionProvider.completions(CompletionProvider.scala:135)
+	dotty.tools.pc.ScalaPresentationCompiler.complete$$anonfun$1(ScalaPresentationCompiler.scala:150)
+```
+#### Short summary: 
+
+scala.MatchError: TypeDef(Matriz,AppliedTypeTree(Ident(Vector),List(AppliedTypeTree(Ident(Vector),List(Ident(Int)))))) (of class dotty.tools.dotc.ast.Trees$TypeDef)

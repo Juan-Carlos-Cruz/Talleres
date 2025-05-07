@@ -1,3 +1,16 @@
+file:///C:/Users/Usuario/OneDrive/Escritorio/Universidad/4%20Semestre/FDP%20funcional%20y%20concurrente/Taller6/src/main/scala/Matrices/package.scala
+### scala.MatchError: TypeDef(Matriz,AppliedTypeTree(Ident(Vector),List(AppliedTypeTree(Ident(Vector),List(Ident(Int)))))) (of class dotty.tools.dotc.ast.Trees$TypeDef)
+
+occurred in the presentation compiler.
+
+presentation compiler configuration:
+
+
+action parameters:
+offset: 5304
+uri: file:///C:/Users/Usuario/OneDrive/Escritorio/Universidad/4%20Semestre/FDP%20funcional%20y%20concurrente/Taller6/src/main/scala/Matrices/package.scala
+text:
+```scala
 import common._
 import Benchmark._
 import scala.util.Random
@@ -147,7 +160,7 @@ package object Matrices {
       C11.zip(C12).map { case (r1, r2) => r1 ++ r2 } ++ C21.zip(C22).map { case (r1, r2) => r1 ++ r2 }
     }
   }
-  //  Ejercicio 1.3.3
+  //  Ejercicio 1.3.@@
   def multStrassenPar(m1: Matriz, m2: Matriz): Matriz = {
     val n = m1.length
     if (n <= 64) multStrassen(m1, m2)
@@ -186,3 +199,22 @@ package object Matrices {
     }
   }
 }
+
+```
+
+
+
+#### Error stacktrace:
+
+```
+dotty.tools.pc.completions.KeywordsCompletions$.checkTemplateForNewParents$$anonfun$2(KeywordsCompletions.scala:218)
+	scala.Option.map(Option.scala:242)
+	dotty.tools.pc.completions.KeywordsCompletions$.checkTemplateForNewParents(KeywordsCompletions.scala:215)
+	dotty.tools.pc.completions.KeywordsCompletions$.contribute(KeywordsCompletions.scala:44)
+	dotty.tools.pc.completions.Completions.completions(Completions.scala:126)
+	dotty.tools.pc.completions.CompletionProvider.completions(CompletionProvider.scala:135)
+	dotty.tools.pc.ScalaPresentationCompiler.complete$$anonfun$1(ScalaPresentationCompiler.scala:150)
+```
+#### Short summary: 
+
+scala.MatchError: TypeDef(Matriz,AppliedTypeTree(Ident(Vector),List(AppliedTypeTree(Ident(Vector),List(Ident(Int)))))) (of class dotty.tools.dotc.ast.Trees$TypeDef)
